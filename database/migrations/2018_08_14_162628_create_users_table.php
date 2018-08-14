@@ -25,11 +25,11 @@ class CreateUsersTable extends Migration
             $table->date('birth')->nullable();
             $table->char('gender', 1)->nullable();
 			$table->text('notes')->nullable();
-			
+
 			// Dados de autenticação
             $table->string('email', 80)->unique();
             $table->string('password', 254)->nullable();
-			
+
 			// Permissão
 			$table->string('status')->default('active');
 			$table->string('permission')->default('app.user');
@@ -48,7 +48,7 @@ class CreateUsersTable extends Migration
 	public function down()
 	{
 		Schema::table('users', function(Blueprint $table) {
-			
+
 		});
 		Schema::drop('users');
 	}

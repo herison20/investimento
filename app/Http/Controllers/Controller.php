@@ -18,14 +18,15 @@ class Controller extends BaseController
             'title' => $variavel
         ]);
     }
-    
+
     public function cadastrar()
     {
         echo "tela de cadastro";
     }
-
+    // method to user login view
     public function fazerLogin()
     {
-        echo "tela fazer login";
+        return view('user.login')
+        
     }
 }
