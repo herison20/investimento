@@ -17,7 +17,11 @@ class UserSocial extends Model
      * @var array
      */
     protected $fillable = [
-        'user_id', 'social_network', 'social_id', 'social_email', 'social_avatar'
+        'user_id',
+        'social_network',
+        'social_id',
+        'social_email',
+        'social_avatar'
     ];
 
     /**
