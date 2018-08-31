@@ -9,7 +9,19 @@
        -moz-box-sizing: border-box;
            -box-sizing: border-box;
 }
-
+body{
+    background: #f7f7f7;
+}
+div.background{
+    position: absolute;
+    left: 0;
+    width: calc(100% - 400px);
+    height: 100%;
+    background: url("../assets/images/9.jpg");
+    background-size: cover;
+    -webkit-filter: grayscale(80%) blur(5px);
+    
+}
 /*login*/
 
 section#conteudo-view{
@@ -17,20 +29,20 @@ section#conteudo-view{
     right: 0;
     padding: 20px;
     float:right;
-    width: 300px;
+    width: 400px;
     height: 100%;
-    background: #51dca6;
+    background: #264767;
 }
 section#conteudo-view h1{
-    font: 3em 'Fredoka One', cursive;
+    font: 4em 'Fira Code', cursive;
     float: left;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 150px;
     color: #f3f3f3;
 }
 section#conteudo-view h3,
 section#conteudo-view form p{
-    font: .8em 'Fredoka One', cursive;
+    font: 1.8em 'Fira Code', cursive;
     float: left;
     width: 100%;
     color: #f3f3f3;
@@ -58,15 +70,126 @@ section#conteudo-view form label input{
     height: 40px;
     padding: 0 20px;
     border-radius: 20px;
-    border: 2px solid #52ca9b;
+    border: 2px solid #547592;
     color: #959595;
-    font: 1em 'Fira Code Retina', cursive;
+    font: 1em 'Fira Code', cursive;
 }
 section#conteudo-view form input[type="submit"]{
     width: 60%;
     float: right;
-    background: #00ff9c;
+    background: #547592;
     text-align: center;
-    font: 1em 'Fredoka One', cursive;
+    font: 1em 'Fira Code', cursive;
+    color: #f9f9f9;
+}
+
+/*menu-lateral*/
+
+#principal{
+    position: fixed;
+    float:left;
+    width: 250px;
+    height: 100%;
+    background: #fff;
+    z-index: 5;
+    border-right: 1px solid #e9e9e9;
+    box-shadow: 0 0 15px rgba(0,0,0,.15);
+}
+
+#principal ul,
+#principal ul li{
+    float: left;
+    width: 100%;
+}
+
+#principal ul li a{
+    float: left;
+    width: 100%;
+    height: 80px;
+    color: #9c9c9c;
+    border-bottom: 1px solid #e9e9e9; 
+}
+
+#principal ul li a i{
+    float: left;
+    height: 80px;
+    width: 80px;
+    color: inherit;
+    text-align: center;
+    line-height: 80px;
+    font-size: 2em;
+    
+}
+
+#principal ul li a h3{
+    float: left;
+    height: 80px;
+    width: 80px;
+    font: 1.25em/80px 'Fira Code', cursive;
+    color: inherit;
+    
+    
+}
+
+#principal ul li a:hover{
+
+    color: #264767;
+    
+}
+
+#view-conteudo{
+    position: fixed;
+    float: left;
+    width: 100%;
+    height: 100%;
+    padding: 20px 20px 20px 300px;
+    z-index: 1;
+}
+
+form.form-padrao{
+    float: left;
+    width: 100%;
+}
+
+form.form-padrao label{
+    float:left;
+    width: 49%;
+    height: 60px;
+    padding: 7px 15px;
+    border: 1px solid #e9e9e9;
+    background: #fff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+form.form-padrao label:nth-last-of-type(odd){
+    margin-left: 2%;
+}
+
+form.form-padrao label span{
+    float: left;
+    width: 100%;
+    font: 400 .75em 'Fira Code';
+    color: #c7c7c7;
+    padding-bottom: 5px;
+}
+
+form.form-padrao label input{
+    float: left;
+    width: 100%;
+    font: 400 1.25em 'Fira Code';
+    color: #5c5c5c;
+    background: transparent;
+}
+
+form.form-padrao label.submit{
+    background: #547592;
+    border-color: #547592;
+}
+
+form.form-padrao label.submit input{
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 50px;
     color: #f9f9f9;
 }

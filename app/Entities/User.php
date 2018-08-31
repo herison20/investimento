@@ -4,6 +4,7 @@ namespace App\Entities;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
@@ -16,6 +17,8 @@ class User extends Authenticatable
      *
      * @var array
      */
+    public $table = 'users';
+
     protected $fillable = [
         'cpf',
         'name',
@@ -38,4 +41,9 @@ class User extends Authenticatable
         'password',
         'remember_token'
     ];
+
+    public function setPasswordAttribute($value)
+    {
+        $this->attributes['password'] = env('PASSWORD_HASH') ? bcrypt($value) : $value;
+    }
 }

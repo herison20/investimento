@@ -4,14 +4,17 @@
         <meta charset="utf-8">
         <title>Login | Investindo</title>
         <link rel="stylesheet" href="{{ asset('css/stylesheet.css') }}">
-        <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Raleway" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css">
 
     </head>
     <body>
+        <div class="background">
+
+        </div>
         <section id="conteudo-view" class="login">
 
-            <h1>Investindo</h1>
-            <h3>O nosso gerenciador de investimento</h3>
+            <h1>SINDPESCA</h1>
+            <h3>Caapiranga - AM</h3>
             {!! Form::open(['route' => 'user.login', 'method' => 'post']) !!}
                 <p>Acesse o sistema</p>
 
